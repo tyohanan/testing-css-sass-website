@@ -1,0 +1,43 @@
+$blue-color: #1f4e8c;
+$red-main-color: #f22771;
+$main-font: sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-1 {
+  height: 5em;
+  font-family: $main-font;
+  background-color: $red-main-color;
+
+  h1 {
+    color: white;
+
+    order: 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    ul {
+      padding: 1em;
+      background-color: $red-main-color;
+    }
+
+    a {
+      font-size: 1em;
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: $blue-color;
+      transition: 0.3s;
+    }
+  }
+}
