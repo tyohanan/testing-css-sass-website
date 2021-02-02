@@ -12,13 +12,17 @@ $main-font: sans-serif;
   box-sizing: border-box;
 }
 
-h1 {
-  font-weight: bolder;
-  color: white;
+@function font-color-setting($color) {
+  @if (lightness($color) >70) {
+    @return black;
+  } @else {
+    @return white;
+  }
 }
 
-p {
-  color: white;
+@mixin set-background-color($color) {
+  background: $color;
+  color: font-color-setting($color);
 }
 
 .logo {
@@ -47,8 +51,8 @@ img {
 
 //main navigation------------------
 .main {
+  @include set-background-color($five-color);
   font-family: $main-font;
-  background-color: $five-color;
   height: 600px;
 
   nav {
@@ -94,6 +98,11 @@ img {
 }
 
 // button--------------------
+@mixin set-button-color($color) {
+  border-color: font-color-setting($color);
+  color: font-color-setting($color);
+}
+
 button {
   padding: 20px;
   background: rgba(255, 0, 0, 0);
@@ -104,8 +113,7 @@ button {
 
 .button {
   &-1 {
-    border-color: $fourth-color;
-    color: $fourth-color;
+    @include set-button-color($fourth-color);
   }
   &-1:hover {
     transition: 0.1s;
@@ -116,27 +124,14 @@ button {
   }
 
   &-2 {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    @include set-button-color($fourth-color);
   }
   &-2:hover {
     transition: 0.1s;
     color: white;
     background-color: $fourth-color;
     border-color: $fourth-color;
-    transform: scale(0.98);
-  }
-
-  &-3 {
-    border-color: $fourth-color;
-    color: $fourth-color;
-  }
-  &-3:hover {
-    transition: 0.1s;
-    color: white;
-    background-color: $main-color;
-    border-color: $main-color;
-    transform: scale(0.98);
+    transform: scale(0.93);
   }
 }
 
@@ -149,6 +144,45 @@ $paragraph: (1, 2, 3, 4, 5);
   }
 
   .button-#{$number} {
+    padding: 20px 35px;
     margin: 1em;
+  }
+
+  .button-#{$number}:hover {
+    box-shadow: 1px 1px 5px black;
+  }
+}
+
+//content-------------------------
+.content {
+  @include set-background-color($secondary-color);
+  font-family: sans-serif;
+  padding-top: 50px;
+  height: 600px;
+
+  &-warp {
+    margin: 20px 50px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  &-1 {
+    transition: 0.3s;
+    height: min(350px);
+    padding: 10px 50px;
+    border: 1px solid;
+    border-radius: 10px;
+  }
+
+  &-1:hover {
+    @include set-background-color(white);
+    transition: 0.3s;
+    border-radius: 50px;
+    transform: scale(0.95);
   }
 }
