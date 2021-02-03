@@ -212,6 +212,7 @@ button {
   background: white;
   color: black;
   transition: 0.3s;
+  border-color: white;
   border-radius: 50px;
   transform: scale(0.95);
 }
