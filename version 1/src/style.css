@@ -32,7 +32,7 @@ img {
   background: #0b9ed9;
   color: white;
   font-family: sans-serif;
-  height: 600px;
+  height: 700px;
 }
 
 .main nav {
@@ -186,14 +186,18 @@ button {
   color: white;
   font-family: sans-serif;
   padding-top: 50px;
-  height: 600px;
+  height: 700px;
 }
 
 .content-warp {
-  margin: 20px 50px;
+  margin: 20px 200px;
   gap: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-warp img {
+  width: 20%;
 }
 
 .content p {
@@ -202,8 +206,9 @@ button {
 
 .content-1 {
   transition: 0.3s;
-  height: 350px;
-  padding: 10px 50px;
+  height: 250px;
+  margin: 10px 10px;
+  padding: 10px 70px;
   border: 1px solid;
   border-radius: 10px;
 }
@@ -215,5 +220,23 @@ button {
   border-color: white;
   border-radius: 50px;
   transform: scale(0.95);
+}
+
+.menu {
+  background: #021859;
+  color: white;
+  font-family: sans-serif;
+  padding: 30px 50px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-1 {
+  padding: 0 20px;
+}
+
+.menu p {
+  line-height: 1.5;
 }
 /*# sourceMappingURL=style.css.map */

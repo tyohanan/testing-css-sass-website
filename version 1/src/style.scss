@@ -53,7 +53,7 @@ img {
 .main {
   @include set-background-color($five-color);
   font-family: $main-font;
-  height: 600px;
+  height: 700px;
 
   nav {
     display: flex;
@@ -158,13 +158,17 @@ $paragraph: (1, 2, 3, 4, 5);
   @include set-background-color($secondary-color);
   font-family: sans-serif;
   padding-top: 50px;
-  height: 600px;
+  height: 700px;
 
   &-warp {
-    margin: 20px 50px;
+    margin: 20px 200px;
     gap: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      width: 20%;
+    }
   }
 
   p {
@@ -173,8 +177,9 @@ $paragraph: (1, 2, 3, 4, 5);
 
   &-1 {
     transition: 0.3s;
-    height: min(350px);
-    padding: 10px 50px;
+    height: min(250px);
+    margin: 10px 10px;
+    padding: 10px 70px;
     border: 1px solid;
     border-radius: 10px;
   }
@@ -185,5 +190,22 @@ $paragraph: (1, 2, 3, 4, 5);
     border-color: white;
     border-radius: 50px;
     transform: scale(0.95);
+  }
+}
+
+.menu {
+  @include set-background-color($fourth-color);
+  font-family: sans-serif;
+  padding: 30px 50px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+
+  &-1 {
+    padding: 0 20px;
+  }
+
+  p {
+    line-height: 1.5;
   }
 }
