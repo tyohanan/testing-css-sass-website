@@ -25,56 +25,6 @@ img {
   max-width: 1100px;
   padding: 10px 30px;
   margin: 0 auto;
-  overflow: auto;
-}
-
-.main {
-  background: #0b9ed9;
-  color: white;
-  font-family: sans-serif;
-  height: 700px;
-}
-
-.main nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main nav ul {
-  display: flex;
-  list-style-type: none;
-}
-
-.main nav li {
-  padding: 1em;
-}
-
-.main nav a {
-  font-size: 1em;
-  color: white;
-  transition: 0.5s;
-}
-
-.main nav a:hover {
-  color: #021859;
-  transition: 0.5s;
-}
-
-.main-show {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-.main-show .test {
-  padding: 25px 50px;
-}
-
-.main-show img {
-  width: 30%;
 }
 
 button {
@@ -181,6 +131,55 @@ button {
   box-shadow: 1px 1px 5px black;
 }
 
+.main {
+  background: #0b9ed9;
+  color: white;
+  font-family: sans-serif;
+  height: 700px;
+}
+
+.main nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.main nav li {
+  padding: 1em;
+}
+
+.main nav a {
+  font-size: 1em;
+  color: white;
+  transition: 0.5s;
+}
+
+.main nav a:hover {
+  color: #021859;
+  transition: 0.5s;
+}
+
+.main-show {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.main-show .test {
+  padding: 25px 50px;
+}
+
+.main-show img {
+  width: 30%;
+}
+
 .content {
   background: #032ca6;
   color: white;
@@ -222,6 +221,16 @@ button {
   transform: scale(0.95);
 }
 
+.footer {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .menu {
   background: #021859;
   color: white;
@@ -238,5 +247,17 @@ button {
 
 .menu p {
   line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .main {
+    height: 400px;
+  }
+  .main-content {
+    text-align: center;
+  }
+  .main-content img {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
